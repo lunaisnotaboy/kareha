@@ -36,10 +36,5 @@ if [ -f "package.json" ]; then
   bin/yarn install
 fi
 
-which foreman >/dev/null 2>&1 || {
-  echo "==> Installing Foreman…"
-  gem install foreman --silent
-}
-
 echo "==> Indexing code…"
 bin/solargraph bundle

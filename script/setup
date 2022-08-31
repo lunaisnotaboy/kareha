@@ -25,6 +25,15 @@ cd redis-stable
 make
 cd "../.."
 
+echo "==> Setting up Overmind…"
+mkdir overmind
+cd overmind
+wget https://github.com/DarthSim/overmind/releases/download/v2.3.0/overmind-v2.3.0-linux-amd64.gz
+gzip -d overmind-v2.3.0-linux-amd64.gz
+mv overmind-v2.3.0-linux-amd64 overmind
+chmod +x overmind
+cd "../.."
+
 echo "==> Setting up DB…"
 # reset database to a fresh state.
 bin/rails db:drop db:create db:migrate

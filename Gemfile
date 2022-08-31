@@ -41,6 +41,7 @@ group :development do
   gem 'capistrano', '~> 3.17', '>= 3.17.1', require: false
   gem 'capistrano-rails', '~> 1.6', '>= 1.6.2', require: false
   gem 'capistrano-rbenv', '~> 2.2', require: false
+  gem 'replicate', '~> 1.5', '>= 1.5.1', require: false
 end
 
 group :production do

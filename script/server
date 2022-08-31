@@ -15,4 +15,4 @@ test -z "$RACK_ENV" &&
 
 # boot the app and any other necessary processes.
 echo "==> Starting the server…"
-foreman start -p 3000
+bin/overmind start -f Procfile.dev -p 3000

@@ -29,6 +29,7 @@ yarn-debug.log*
 /vendor/various
 /vendor/gems
 /vendor/memcached-*
+/vendor/overmind
 /vendor/redis-stable.tar.gz
 /vendor/redis-stable
 /dumps/*
@@ -42,4 +43,6 @@ yarn-debug.log*
 /.env.production.local
 /.env.test
 /.env.test.local
+*.dump
+.overmind.sock
 .pnp.*
