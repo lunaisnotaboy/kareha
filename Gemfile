@@ -38,6 +38,9 @@ group :development do
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
   gem 'binding_of_caller', '~> 1.0'
   gem 'brakeman', '~> 5.3', '>= 5.3.1'
+  gem 'capistrano', '~> 3.17', '>= 3.17.1', require: false
+  gem 'capistrano-rails', '~> 1.6', '>= 1.6.2', require: false
+  gem 'capistrano-rbenv', '~> 2.2', require: false
 end
 
 group :production do
