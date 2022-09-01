@@ -1,5 +1,7 @@
+import locales from './app/frontend/locales'
 import VuePlugin from '@vitejs/plugin-vue'
 import RubyPlugin from 'vite-plugin-ruby'
+import JSON5Plugin from './vite.json5'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
@@ -17,11 +19,15 @@ export default defineConfig({
     sourcemap: process.env.NODE_ENV !== 'production' || process.env.RAILS_ENV !== 'production'
   },
   define: {
-    _DEV_: process.env.NODE_ENV !== 'production' || process.env.RAILS_ENV !== 'production'
+    _DEV_: process.env.NODE_ENV !== 'production' || process.env.RAILS_ENV !== 'production',
+    _LANGS_: JSON.stringify(Object.entries(locales).map(([k, v]) => [k, v._lang_]))
   },
   plugins: [
+    JSON5Plugin(),
     RubyPlugin(),
-    VuePlugin()
+    VuePlugin({
+      reactivityTransform: true
+    })
   ],
   resolve: {
     alias: {

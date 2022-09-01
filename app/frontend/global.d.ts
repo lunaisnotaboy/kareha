@@ -1,3 +1,11 @@
+declare module '@/themes/*.json5' {
+  import { Theme } from '@/utils/theme'
+
+  const theme: Theme
+
+  export default theme
+}
+
 declare module '*.vue' {
   import type { DefineComponent } from 'vue'
 
@@ -7,3 +15,6 @@ declare module '*.vue' {
 }
 
 declare const _DEV_: boolean
+declare const _LANGS_: string[][]
+
+type FIXME = any

@@ -12,5 +12,4 @@ A small application for writing stories.
 
 ## License
 
-For now, this is closed-source. It will become open-source
-when it's production-ready.
+This is licensed under the [AGPL-3.0 license](LICENSE).
