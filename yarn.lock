@@ -1212,6 +1212,7 @@ __metadata:
     json5: ^2.2.1
     postcss: ^8.4.16
     rollup: ^2.79.0
+    rollup-plugin-gzip: ^3.0.1
     sass: ^1.54.7
     tinycolor2: ^1.4.2
     typescript: ^4.8.2
@@ -1634,6 +1635,15 @@ __metadata:
   bin:
     rimraf: bin.js
   checksum: 87f4164e396f0171b0a3386cc1877a817f572148ee13a7e113b238e48e8a9f2f31d009a92ec38a591ff1567d9662c6b67fd8818a2dbbaed74bc26a87a2a4a9a0
+  languageName: node
+  linkType: hard
+
+"rollup-plugin-gzip@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "rollup-plugin-gzip@npm:3.0.1"
+  peerDependencies:
+    rollup: ">=2.0.0"
+  checksum: df456cd1720be1ddf7a57c1d81be70f7bc7cbba7d9098f369ebcf0f31f21db1eb16ab9d5f19a59fe844129a972e244c5be300007de4f63274d5991ecf28c92a9
   languageName: node
   linkType: hard
 

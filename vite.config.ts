@@ -1,5 +1,7 @@
 import locales from './app/frontend/locales'
+import GZipPlugin from 'rollup-plugin-gzip'
 import VuePlugin from '@vitejs/plugin-vue'
+import { brotliCompressSync } from 'zlib'
 import RubyPlugin from 'vite-plugin-ruby'
 import JSON5Plugin from './vite.json5'
 import { defineConfig } from 'vite'
@@ -24,6 +26,11 @@ export default defineConfig({
   },
   plugins: [
     JSON5Plugin(),
+    GZipPlugin(),
+    GZipPlugin({
+      customCompression: (content) => brotliCompressSync(Buffer.from(content)),
+      fileName: '.br'
+    }),
     RubyPlugin(),
     VuePlugin({
       reactivityTransform: true
