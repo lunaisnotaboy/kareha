@@ -10,9 +10,13 @@
 
     <title>Kareha</title>
 
+    <script id="application-info" nonce="<%= content_security_policy_nonce %>" type="application/json">
+      <%= application_info.to_json.html_safe %>
+    </script>
+
     <%= vite_client_tag %>
     <%= vite_stylesheet_tag 'application.scss' %>
-    <%= vite_javascript_tag 'application' %>
+    <%= vite_typescript_tag 'application' %>
   </head>
 
   <body>

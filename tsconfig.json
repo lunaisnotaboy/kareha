@@ -3,6 +3,7 @@
     "allowJs": true,
     "esModuleInterop": true,
     "isolatedModules": true,
+    "jsx": "preserve",
     "lib": ["dom", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
@@ -10,6 +11,9 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "paths": {
+      "@/*": ["./app/frontend/*"]
+    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
@@ -17,5 +21,5 @@
     "target": "esnext",
     "useDefineForClassFields": true
   },
-  "include": ["app/frontend"]
+  "include": ["app/frontend/**/*"]
 }

@@ -7,4 +7,5 @@
 # locales as you wish.
 ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.acronym 'API'
+  inflect.acronym 'PWA'
 end

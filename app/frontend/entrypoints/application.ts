@@ -1,3 +1,4 @@
-console.log('Hello, World!')
+// Import the main Vue application
+import { main } from '@/init'
 
-export {}
+main()

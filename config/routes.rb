@@ -8,13 +8,12 @@ Kareha::Application.routes.draw do
 
   # Verify that users are administrators before granting access to these URLs
   authenticate :user, ->(user) { user.admin? } do
-    # MATCH /sidekiq
     mount Sidekiq::Web => '/sidekiq'
   end
 
-  # GET /status
   get '/status', to: 'status#plain'
 
-  # MATCH /
-  root 'landing#index'
+  get '/(*any)', to: 'pwa#index', as: :web
+
+  root 'pwa#root_fallback'
 end
