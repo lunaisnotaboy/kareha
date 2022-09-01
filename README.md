@@ -1,4 +1,4 @@
-# Kareha
+# Kareha [![Ruby on Rails CI](https://github.com/lunaisnotaboy/kareha/actions/workflows/rails.yml/badge.svg)](https://github.com/lunaisnotaboy/kareha/actions/workflows/rails.yml)
 
 A small application for writing stories.
 
