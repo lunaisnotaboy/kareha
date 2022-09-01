@@ -39,6 +39,8 @@ jobs:
         uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa
         with:
           bundler-cache: true
+      - name: Install dependencies
+        run: sudo apt update && sudo apt install -y build-essential bison libyaml-dev libgdbm-dev libreadline-dev libjemalloc-dev libncurses5-dev libffi-dev zlib1g-dev libssl-dev libvips42 libvips-dev
       - name: Security audit application code
         run: bin/brakeman -q -w2
       - name: Lint Ruby files
